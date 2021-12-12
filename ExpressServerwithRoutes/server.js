@@ -37,10 +37,8 @@ app.get('/coders/:skill/:scale_value',(request,response)=>{
 
 
 app.get('/all%20langs',(request,response)=>{
-    // const data = request.params;
-    // response.send(`We are coders and we know ${data.skill} ---> ${data.scale_value}/10 !!!`);
+
     response.send(knowlangs);
-    // response.json(knowlangs); //also works
 });
 
 app.get('/add/:skill/:scale_value?',(request,response)=>{
@@ -86,23 +84,25 @@ app.get('/search/:skill',(request,response)=>{
 
 });
 
-app.get('/search/:scale_val',(request,response)=>{
+app.get('/search/vals/:scale_val',(request,response)=>{
     const data = request.params;
     let reply;
-    if(!knowlangs[data.skill])
+    let with_val = [];
+    let count = 0;
+
+    for(let i in knowlangs)
     {
-        reply = {
-            message: "skill not found!!"
+        if(knowlangs[i] === Number(data.scale_val))
+        {
+            count++;
+            with_val.push(i);
         }
     }
-    else
-    {
+
         reply = {
-            message: "Skill found!!!",
-            skill: data.skill,
-            scale_value: knowlangs[data.skill]
+            message: count + " skills matched!!!",
+            skills: with_val
         }
-    }
 
     response.send(reply);
 
