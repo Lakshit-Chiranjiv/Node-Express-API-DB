@@ -1,0 +1,27 @@
+{
+  "name": "node-express-api-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main_index.js",
+  "scripts": {
+    "main": "node main_index",
+    "server:e": "nodemon ./basicServerExpress/server.js",
+    "routeserver:e": "nodemon ./ExpressServerwithRoutes/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lakshit-Chiranjiv/Node-Express-API-DB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lakshit-Chiranjiv/Node-Express-API-DB/issues"
+  },
+  "homepage": "https://github.com/Lakshit-Chiranjiv/Node-Express-API-DB#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
