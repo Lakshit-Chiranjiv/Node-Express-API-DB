@@ -6,7 +6,8 @@
   "scripts": {
     "main": "node main_index",
     "server:e": "nodemon ./basicServerExpress/server.js",
-    "routeserver:e": "nodemon ./ExpressServerwithRoutes/server.js"
+    "routeserver:e": "nodemon ./ExpressServerwithRoutes/server.js",
+    "dbs": "node ./using-JSON-File-as-DB/backend/server.js"
   },
   "repository": {
     "type": "git",
