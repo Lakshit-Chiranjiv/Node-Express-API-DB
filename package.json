@@ -7,7 +7,8 @@
     "main": "node main_index",
     "server:e": "nodemon ./basicServerExpress/server.js",
     "routeserver:e": "nodemon ./ExpressServerwithRoutes/server.js",
-    "dbs": "node ./using-JSON-File-as-DB/backend/server.js"
+    "dbs": "node ./using-JSON-File-as-DB/backend/server.js",
+    "dbfs": "node ./JSONfileDB-frontend/backend/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/Lakshit-Chiranjiv/Node-Express-API-DB#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   },
   "devDependencies": {
